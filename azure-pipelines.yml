@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'epicbook-pool'
 
 variables:
   serviceConnection: 'epicbook-azure-rm'
