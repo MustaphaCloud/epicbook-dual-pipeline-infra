@@ -34,6 +34,7 @@ stages:
         ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
         ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
         ARM_TENANT_ID: $(ARM_TENANT_ID)
+        TF_VAR_ssh_public_key: $(TF_VAR_ssh_public_key)
 
     - script: |
         terraform plan -out=tfplan
@@ -44,6 +45,7 @@ stages:
         ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
         ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
         ARM_TENANT_ID: $(ARM_TENANT_ID)
+        TF_VAR_ssh_public_key: $(TF_VAR_ssh_public_key)
 
     - script: |
         terraform apply -auto-approve tfplan
@@ -54,6 +56,7 @@ stages:
         ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
         ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
         ARM_TENANT_ID: $(ARM_TENANT_ID)
+        TF_VAR_ssh_public_key: $(TF_VAR_ssh_public_key)
 
     - script: |
         echo "===== INFRASTRUCTURE OUTPUTS ====="
@@ -66,3 +69,4 @@ stages:
         ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
         ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
         ARM_TENANT_ID: $(ARM_TENANT_ID)
+        TF_VAR_ssh_public_key: $(TF_VAR_ssh_public_key)

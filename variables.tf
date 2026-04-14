@@ -14,8 +14,9 @@ variable "admin_username" {
   default = "azureuser"
 }
 
-variable "ssh_public_key_path" {
-  default = "~/.ssh/epicbook-key.pub"
+variable "ssh_public_key" {
+  description = "SSH public key content"
+  default     = ""
 }
 
 variable "mysql_admin_username" {
